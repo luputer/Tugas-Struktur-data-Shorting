@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting js</title>
+</head>
+<body>
+    <p>Klik tombol untuk mengurutkan array secara alfabetis atau numerik.</p>
+    <button onclick="myFuction1()">secara alpabet</button>
+    <button onclick="myFuction2()">secara numerik</button>
+
+    <p id="demo"></p>
+
+
+    <script>
+        const nilai = [40,100, 1, 5, 25, 10];
+        document.getElementById("demo").innerHTML = nilai;
+
+        function myFuction1(){
+            nilai.sort();
+            document.getElementById("demo").innerHTML = nilai;
+        }
+        
+        function myFuction2(){
+            nilai.sort(function(a, b) {
+                return a - b;
+            });
+            document.getElementById("demo").innerHTML = nilai;
+
+        }
+    
+    
+
+    </script>
+</body>
+</html>
